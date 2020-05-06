@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Colorful</title>
+</head>
+
+<body>
+    <div class="center">
+
+        <button id="Click" onclick="myFunction">Click Me</button>
+    </div>
+    <script>
+        var colors = ["blue", "green", "gray", "yellow", "black", "red", "pink", "white"], // the color choices Blue, green, grey, yellow, black, red, pink, white
+            index = 0; // index of the current color
+
+        document.getElementById("Click").onclick = function () {
+            document.body.style.background = colors[index]; // set the color of body to the current color
+            index = (index + 1) % colors.length; // increment index to point to the next color 
+        }
+
+    </script>
+</body>
+
+</html>
